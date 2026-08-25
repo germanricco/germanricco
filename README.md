@@ -51,7 +51,7 @@ sobre-mi/
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-1f6feb?style=flat-square) ![Simulink](https://img.shields.io/badge/Simulink-1f6feb?style=flat-square) ![Control en cascada](https://img.shields.io/badge/Control_en_cascada-1f6feb?style=flat-square) &nbsp;·&nbsp; ✅ Documentación completa
 
-Modelado dinámico y diseño de una arquitectura de control en cascada (FOC + PID + observador de estado) para el posicionamiento de una carga mecánica accionada por un motor síncrono de imanes permanentes (PMSM). Validado íntegramente por simulación en MATLAB/Simulink, con informe técnico de 128 páginas cubriendo modelado, análisis de estabilidad/observabilidad/controlabilidad y una campaña de simulación progresiva (seguimiento, rechazo de perturbaciones, robustez paramétrica, no idealidades, comportamiento térmico e implementación discreta).
+Modelado dinámico y diseño de una arquitectura de control en cascada (FOC + PID + observador de estado) para el posicionamiento de una carga mecánica accionada por un motor síncrono de imanes permanentes (PMSM). Validado íntegramente por simulación en MATLAB/Simulink, con informe técnico cubriendo modelado, análisis de estabilidad/observabilidad/controlabilidad y una campaña de simulación progresiva (seguimiento, rechazo de perturbaciones, robustez paramétrica, no idealidades, comportamiento térmico e implementación discreta).
 
 ### [multimodal-industrial-parts-classifier](https://github.com/germanricco/multimodal-industrial-parts-classifier)
 
