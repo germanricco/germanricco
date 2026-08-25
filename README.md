@@ -38,7 +38,7 @@ sobre-mi/
 │   ├── control-discreto.md       → Aprendiendo
 │   └── realidad-virtual.md       → Aprendiendo
 └── vision/
-    └── solarpunk.md              → Robótica + energías verdes al servicio de soluciones reales, sin utopías
+    └── solarpunk.md              → Robótica + energías verdes al servicio de soluciones reales.
 ```
 
 <p align="center"><sub>🇦🇷 Español (nativo) · 🇺🇸 English (professional working proficiency)</sub></p>
