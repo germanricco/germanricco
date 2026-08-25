@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="assets/banner-control-loop.svg" alt="Germán Ricco — Control Systems & Robotics" width="960" />
+</div>
+
+<br/>
+
 ## Hi there 👋
 
 <!--

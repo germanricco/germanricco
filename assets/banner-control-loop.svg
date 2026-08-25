@@ -1,0 +1,247 @@
+<svg width="960" height="310" viewBox="0 0 960 310" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','Courier New',monospace">
+  <defs>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect x="1" y="1" width="958" height="308" rx="14" fill="#0d1117" stroke="#21262d" stroke-width="1.5"/>
+  <rect x="1" y="1" width="958" height="308" rx="14" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- ================= CONSOLE HEADER ================= -->
+  <g font-family="'Fira Code','Courier New',monospace">
+    <mask id="typeMask">
+      <rect x="265" y="21" width="0" height="26" fill="#ffffff">
+        <animate attributeName="width" dur="10s" repeatCount="indefinite" keyTimes="0;0.25;1" values="0;430;430"/>
+      </rect>
+    </mask>
+    <g mask="url(#typeMask)">
+      <text x="480" y="41" text-anchor="middle" fill="#39FF14" filter="url(#glow)" font-size="16" font-weight="700">&gt;_ Germán Ricco | Control Systems &amp; Robotics</text>
+    </g>
+    <rect y="22" width="3" height="22" fill="#39FF14" filter="url(#glow)">
+      <animate attributeName="x" dur="10s" repeatCount="indefinite" keyTimes="0;0.25;1" values="263;695;695"/>
+      <animate attributeName="opacity" dur="0.9s" repeatCount="indefinite" values="1;1;0;0"/>
+    </rect>
+  </g>
+
+  <g transform="translate(0,60)">
+  <!-- ================= WIRES ================= -->
+  <g stroke="#30363d" stroke-width="2" fill="none">
+    <line x1="61" y1="75" x2="101" y2="75"/>
+    <line x1="137" y1="75" x2="182" y2="75"/>
+    <line x1="282" y1="75" x2="327" y2="75"/>
+    <line x1="427" y1="75" x2="472" y2="75"/>
+    <line x1="572" y1="75" x2="617" y2="75"/>
+    <line x1="653" y1="75" x2="698" y2="75"/>
+    <line x1="798" y1="75" x2="838" y2="75"/>
+    <line x1="838" y1="75" x2="898" y2="75"/>
+    <line x1="838" y1="75" x2="838" y2="175"/>
+    <line x1="838" y1="175" x2="798" y2="175"/>
+    <line x1="698" y1="175" x2="572" y2="175"/>
+    <line x1="472" y1="175" x2="119" y2="175"/>
+    <line x1="119" y1="175" x2="119" y2="93"/>
+  </g>
+
+  <!-- disturbance input (external, dashed) -->
+  <line x1="635" y1="15" x2="635" y2="57" stroke="#D95319" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- direction arrows -->
+  <g fill="#3fb950">
+    <path d="M101,75 L93,70 L93,80 Z"/>
+    <path d="M898,75 L890,70 L890,80 Z"/>
+    <path d="M147,71 L147,79 L159,75 Z"/>
+    <path d="M294,71 L294,79 L306,75 Z"/>
+    <path d="M439,71 L439,79 L451,75 Z"/>
+    <path d="M586,71 L586,79 L598,75 Z"/>
+    <path d="M667,71 L667,79 L679,75 Z"/>
+    <path d="M838,135 L833,125 L843,125 Z"/>
+    <path d="M631,175 L639,170 L639,180 Z"/>
+    <path d="M291,175 L299,170 L299,180 Z"/>
+    <path d="M119,124 L114,134 L124,134 Z"/>
+  </g>
+  <path d="M635,57 L630,47 L640,47 Z" fill="#D95319"/>
+
+  <!-- tap point -->
+  <circle cx="838" cy="75" r="3.5" fill="#8b949e"/>
+
+  <!-- io / signal labels -->
+  <text x="65" y="63" fill="#58a6ff" font-size="12" font-style="italic">r(t)</text>
+  <text x="882" y="63" fill="#58a6ff" font-size="12" font-style="italic">y(t)</text>
+  <text x="149" y="63" fill="#58a6ff" font-size="11" font-style="italic">e(t)</text>
+  <text x="294" y="63" fill="#58a6ff" font-size="11" font-style="italic">u(t)</text>
+  <text x="439" y="63" fill="#58a6ff" font-size="11" font-style="italic">v(t)</text>
+  <text x="645" y="30" fill="#D95319" font-size="11" font-style="italic">d(t)</text>
+  <text x="608" y="163" fill="#58a6ff" font-size="10" font-style="italic">y_m(t)</text>
+  <text x="274" y="163" fill="#58a6ff" font-size="11" font-style="italic">b(t)</text>
+
+  <!-- ================= SUMMING JUNCTION (principal) ================= -->
+  <g>
+    <circle cx="119" cy="75" r="18" fill="#161b22" stroke="#2ea043" stroke-width="1.5">
+      <animate attributeName="stroke" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.94998;0.95998;0.995;1"
+        values="#2ea043;#2ea043;#39FF14;#39FF14;#2ea043"/>
+    </circle>
+    <text x="119" y="80" text-anchor="middle" fill="#7ee787" font-size="16" font-weight="700">&#931;</text>
+    <text x="108" y="99" text-anchor="middle" fill="#7ee787" font-size="12" font-weight="700">-</text>
+    <text x="84" y="82" text-anchor="middle" fill="#7ee787" font-size="12" font-weight="700">+</text>
+
+    <!-- merge effect: r(t) branch + b(t) branch converge and depart -->
+    <circle r="4" fill="#39FF14" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;0.94998;1"
+        path="M101,75 L137,75"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.94898;0.94998;1" values="0;0;1;1"/>
+    </circle>
+    <circle r="4" fill="#39FF14" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1" keyTimes="0;0.94998;1"
+        path="M119,93 L137,75"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.94898;0.94998;1" values="0;0;1;1"/>
+    </circle>
+  </g>
+
+  <!-- ================= SUMMING JUNCTION (perturbacion) ================= -->
+  <g>
+    <circle cx="635" cy="75" r="18" fill="#161b22" stroke="#2ea043" stroke-width="1.5">
+      <animate attributeName="stroke" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.26180;0.27180;0.30180;0.31180;1"
+        values="#2ea043;#2ea043;#39FF14;#39FF14;#2ea043;#2ea043"/>
+    </circle>
+    <text x="635" y="80" text-anchor="middle" fill="#7ee787" font-size="16" font-weight="700">&#931;</text>
+    <text x="611" y="65" text-anchor="middle" fill="#7ee787" font-size="12" font-weight="700">+</text>
+    <text x="647" y="51" text-anchor="middle" fill="#7ee787" font-size="12" font-weight="700">+</text>
+
+    <!-- merge effect: u(t) branch + d(t) branch converge and depart -->
+    <circle r="4" fill="#39FF14" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.26180;0.31180;1"
+        path="M617,75 L653,75"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.26080;0.26180;0.31180;0.31280;1" values="0;0;1;1;0;0"/>
+    </circle>
+    <circle r="4" fill="#D95319" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.26180;0.31180;1"
+        path="M635,15 L635,57 L653,75"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+        keyTimes="0;0.26080;0.26180;0.31180;0.31280;1" values="0;0;1;1;0;0"/>
+    </circle>
+  </g>
+
+  <!-- ================= BLOCKS ================= -->
+  <!-- Controlador -->
+  <g>
+    <rect x="182" y="50" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="232" y="72" text-anchor="middle" fill="#7ee787" font-size="12" font-weight="700">CONTROLADOR</text>
+    <text x="232" y="86" text-anchor="middle" fill="#3fb950" font-size="9">C(z) · PID</text>
+    <path pathLength="100" d="M182,75 L182,58 A 8,8 0 0 1 190,50 L274,50 A 8,8 0 0 1 282,58 L282,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.02795;0.07795;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.02695;0.02795;0.07795;0.07895;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M182,75 L182,92 A 8,8 0 0 0 190,100 L274,100 A 8,8 0 0 0 282,92 L282,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.02795;0.07795;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.02695;0.02795;0.07795;0.07895;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- Amplificador -->
+  <g>
+    <rect x="327" y="50" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="377" y="72" text-anchor="middle" fill="#7ee787" font-size="11" font-weight="700">AMPLIFICADOR</text>
+    <text x="377" y="86" text-anchor="middle" fill="#3fb950" font-size="9">K_a · PWM</text>
+    <path pathLength="100" d="M327,75 L327,58 A 8,8 0 0 1 335,50 L419,50 A 8,8 0 0 1 427,58 L427,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.10590;0.15590;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.10490;0.10590;0.15590;0.15690;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M327,75 L327,92 A 8,8 0 0 0 335,100 L419,100 A 8,8 0 0 0 427,92 L427,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.10590;0.15590;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.10490;0.10590;0.15590;0.15690;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- Actuador -->
+  <g>
+    <rect x="472" y="50" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="522" y="72" text-anchor="middle" fill="#7ee787" font-size="13" font-weight="700">ACTUADOR</text>
+    <text x="522" y="86" text-anchor="middle" fill="#3fb950" font-size="9">(motor)</text>
+    <path pathLength="100" d="M472,75 L472,58 A 8,8 0 0 1 480,50 L564,50 A 8,8 0 0 1 572,58 L572,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.18385;0.23385;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.18285;0.18385;0.23385;0.23485;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M472,75 L472,92 A 8,8 0 0 0 480,100 L564,100 A 8,8 0 0 0 572,92 L572,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.18385;0.23385;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.18285;0.18385;0.23385;0.23485;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- Planta -->
+  <g>
+    <rect x="698" y="50" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="748" y="72" text-anchor="middle" fill="#7ee787" font-size="14" font-weight="700">PLANTA</text>
+    <text x="748" y="86" text-anchor="middle" fill="#3fb950" font-size="9">G(s)</text>
+    <path pathLength="100" d="M698,75 L698,58 A 8,8 0 0 1 706,50 L790,50 A 8,8 0 0 1 798,58 L798,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.33975;0.38975;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.33875;0.33975;0.38975;0.39075;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M698,75 L698,92 A 8,8 0 0 0 706,100 L790,100 A 8,8 0 0 0 798,92 L798,75" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.33975;0.38975;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.33875;0.33975;0.38975;0.39075;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- Sensor -->
+  <g>
+    <rect x="698" y="150" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="748" y="172" text-anchor="middle" fill="#7ee787" font-size="14" font-weight="700">SENSOR</text>
+    <text x="748" y="186" text-anchor="middle" fill="#3fb950" font-size="9">H(s)</text>
+    <path pathLength="100" d="M798,175 L798,158 A 8,8 0 0 0 790,150 L706,150 A 8,8 0 0 0 698,158 L698,175" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.50154;0.55154;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.50054;0.50154;0.55154;0.55254;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M798,175 L798,192 A 8,8 0 0 1 790,200 L706,200 A 8,8 0 0 1 698,192 L698,175" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.50154;0.55154;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.50054;0.50154;0.55154;0.55254;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- Filtro -->
+  <g>
+    <rect x="472" y="150" width="100" height="50" rx="8" fill="#161b22" stroke="#2ea043" stroke-width="1.5"/>
+    <text x="522" y="172" text-anchor="middle" fill="#7ee787" font-size="14" font-weight="700">FILTRO</text>
+    <text x="522" y="186" text-anchor="middle" fill="#3fb950" font-size="9">F(s)</text>
+    <path pathLength="100" d="M572,175 L572,158 A 8,8 0 0 0 564,150 L480,150 A 8,8 0 0 0 472,158 L472,175" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.62980;0.67980;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.62880;0.62980;0.67980;0.68080;1" values="0;0;1;1;0;0"/>
+    </path>
+    <path pathLength="100" d="M572,175 L572,192 A 8,8 0 0 1 564,200 L480,200 A 8,8 0 0 1 472,192 L472,175" fill="none" stroke="#39FF14" stroke-width="3" stroke-dasharray="20 480" filter="url(#glow)">
+      <animate attributeName="stroke-dashoffset" dur="10s" repeatCount="indefinite" keyTimes="0;0.62980;0.67980;1" values="0;0;-80;-80"/>
+      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" keyTimes="0;0.62880;0.62980;0.67980;0.68080;1" values="0;0;1;1;0;0"/>
+    </path>
+  </g>
+
+  <!-- ================= MAIN TRAVELING PULSE (on wires only) ================= -->
+  <g>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+      keyTimes="0;0.02695;0.02795;0.07795;0.07895;0.10490;0.10590;0.15590;0.15690;0.18285;0.18385;0.23385;0.23485;0.26080;0.26180;0.31180;0.31280;0.33875;0.33975;0.38975;0.39075;0.50054;0.50154;0.55154;0.55254;0.62880;0.62980;0.67980;0.68080;0.94898;0.94998;1"
+      values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"/>
+    <circle r="9" fill="#39FF14" opacity="0.25" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear"
+        keyPoints="0;0.02765;0.08909;0.11674;0.17817;0.20583;0.26725;0.29491;0.31703;0.34469;0.40611;0.51660;0.57803;0.65543;0.71686;0.98420;1"
+        keyTimes="0;0.02795;0.07795;0.10590;0.15590;0.18385;0.23385;0.26180;0.31180;0.33975;0.38975;0.50154;0.55154;0.62980;0.67980;0.94998;1"
+        path="M137,75 L182,75 L282,75 L327,75 L427,75 L472,75 L572,75 L617,75 L653,75 L698,75 L798,75 L838,75 L838,175 L798,175 L698,175 L572,175 L472,175 L119,175 L119,93 Z"/>
+    </circle>
+    <circle r="5" fill="#39FF14" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite" calcMode="linear"
+        keyPoints="0;0.02765;0.08909;0.11674;0.17817;0.20583;0.26725;0.29491;0.31703;0.34469;0.40611;0.51660;0.57803;0.65543;0.71686;0.98420;1"
+        keyTimes="0;0.02795;0.07795;0.10590;0.15590;0.18385;0.23385;0.26180;0.31180;0.33975;0.38975;0.50154;0.55154;0.62980;0.67980;0.94998;1"
+        path="M137,75 L182,75 L282,75 L327,75 L427,75 L472,75 L572,75 L617,75 L653,75 L698,75 L798,75 L838,75 L838,175 L798,175 L698,175 L572,175 L472,175 L119,175 L119,93 Z"/>
+    </circle>
+  </g>
+  </g>
+</svg>
